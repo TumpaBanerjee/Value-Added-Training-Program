@@ -1,4 +1,4 @@
-def test_check_prime():
+def test_check_prime(function):
     test_cases=[(24,1),
                 (151,0),
                 (897765,1),
@@ -8,7 +8,7 @@ def test_check_prime():
     pass_test_case=0
     fail_test_case=0
     for num,flag in test_cases:
-        if check_prime(num)==flag:
+        if function(num)==flag:
             pass_test_case+=1
         else:
             fail_test_case+=1
@@ -18,12 +18,12 @@ def test_check_prime():
         print(f"{pass_test_case} test cases passed")
         print(f"{fail_test_case} test cases failed")
 
-def test_sum_of_digits():
+def test_sum_of_digits(function):
     test_cases=[(100,1),(135,9),(3453,15),(89575,34),(321456,21)]
     pass_test_case=0
     fail_test_case=0
     for num,sum1 in test_cases:
-        if sum_of_digits(num)==sum1:
+        if function(num)==sum1:
             pass_test_case+=1
         else:
             fail_test_case+=1
@@ -33,7 +33,7 @@ def test_sum_of_digits():
         print(f"{pass_test_case} test cases passed")
         print(f"{fail_test_case} test cases failed")
 
-def test_all_prime_sum():
+def test_all_prime_sum(function):
     test_cases=[(10,15),
                 (20,75),
                 (100,1058),
@@ -43,7 +43,7 @@ def test_all_prime_sum():
     pass_test_case=0
     fail_test_case=0
     for num,sum1 in test_cases:
-        if all_prime_sum(num)==sum1:
+        if function(num)==sum1:
             pass_test_case+=1
         else:
             fail_test_case+=1
@@ -53,12 +53,12 @@ def test_all_prime_sum():
         print(f"{pass_test_case} test cases passed")
         print(f"{fail_test_case} test cases failed")
 
-def test_calculate_factorial():
+def test_calculate_factorial(function):
     test_cases=[(5,120),(4,24),(10,3628800),(7,5040),(13,6227020800)]
     pass_test_case=0
     fail_test_case=0
     for num,fact1 in test_cases:
-        if calculate_factorial(num)==fact1:
+        if function(num)==fact1:
             pass_test_case+=1
         else:
             fail_test_case+=1
